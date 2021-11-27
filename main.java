@@ -25,8 +25,10 @@ public class projet {
     return ThreadLocalRandom.current().nextInt(a, b + 1);	
     }
 
+    public 
+
   public static void main(String[] args) {
 
-    }
+  }
 }
 >>>>>>> 819b515ceaecea73ef116658b12793476144b888
