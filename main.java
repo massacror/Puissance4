@@ -16,8 +16,11 @@ public class projet {
 
 
   }
-  public static void javajouer (int a, int j){
-
+  public static void javajouer (int a, int j, int[][] grille){
+    for (int i = 0; i < (grille.length+1); i++){
+      if (grille[i][j] == 0){
+      grille[i][j] = a;}
+    }
   }
 
   public static int entierAleatoire(int a, int b){
