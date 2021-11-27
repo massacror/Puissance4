@@ -29,7 +29,7 @@ public class projet {
     return ThreadLocalRandom.current().nextInt(a, b + 1);	
     }
 
-    public 
+    public stat
 
   public static void main(String[] args) {
 
