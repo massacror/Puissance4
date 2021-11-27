@@ -20,6 +20,7 @@ public class projet {
     for (int i = 0; i < (grille.length+1); i++){
       if (grille[i][j] == 0){
       grille[i][j] = a;}
+      else i++;
     }
   }
 
