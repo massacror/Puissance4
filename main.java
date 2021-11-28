@@ -1,6 +1,4 @@
 // EX1
-package puissance4;
-
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -42,25 +40,26 @@ public class main {
 
     public static void afficheGrille()
     {
-        for(int i=grille.length; i != -1 ; i--){ // On boucle sur les lignes de la dernière vers la première pour bien afficher
-            if(i!=-1)
+        for(int i=grille.length -1; i != -2 ; i--){ // On boucle sur les lignes de la dernière vers la première pour bien afficher
+            if(i!=(-1))
                 {
                     for(int j = 0; j < grille[0].length;j++) // On boucle sur le nb de colonne (Une fois qu'on dans une ligne on l'affiche numéro par numéro)
                 {
-                    System.out.println("|"+grille[i][j]+"|"); //On affiche de haut en bas donc faut boucler sur imax
+                    System.out.print("|"+grille[i][j]+"|"); //On affiche de haut en bas donc faut boucler sur imax
                 }
                 }
             else
                 {
                     for(int j = 0; j < grille[0].length;j++) // On boucle sur le nb de colonne (ligne avec les numéros)
                         {
-                            System.out.println("|" + j + "|");
+                            System.out.print(" " + j + " ");
                         }
                 }
+            System.out.println();
         }}
 
     public static void main(String[] args) {
-
+        afficheGrille();
   }
 
 //EX2 
@@ -88,64 +87,64 @@ public class main {
       }
     }
   return res;
-  }
+  }}
 
-  public static boolean aGagneVer(int x, int y, int a){
-    boolean res = true;
+ //  public static boolean aGagneVer(int x, int y, int a){
+//     boolean res = true;
 
-    if(grille[y][x] != a){res = false;} // comme dans la case choisie il n'y a pas de a als il ne peut pas y avoir d'allignement à partir de cette case :l
+//     if(grille[y][x] != a){res = false;} // comme dans la case choisie il n'y a pas de a als il ne peut pas y avoir d'allignement à partir de cette case :l
     
-    else if (grille[y][x] == a){ // on verifie que dans la case choisie il y ait un a. 
-      if (grille[y+1][x] == a){   // on voit s'il y a un allignement vertical vers le haut
-        for (int i = 0; i < 3; i++){
-          if (grille[y+i][x] != a){
-            res = false;
-          }
-        }
-      }
+//     else if (grille[y][x] == a){ // on verifie que dans la case choisie il y ait un a. 
+//       if (grille[y+1][x] == a){   // on voit s'il y a un allignement vertical vers le haut
+//         for (int i = 0; i < 3; i++){
+//           if (grille[y+i][x] != a){
+//             res = false;
+//           }
+//         }
+//       }
 
-      else if(grille[y-1][x] == a){   // on voit s'il y a un allignement vertical vers le bas
-        for (i = 0; i < 3; i++){
-          if (grille[y-i][x] != a){
-            res = false;
-          }
-        }
-      }
-    }
-  return estComplete;
-  }
+//       else if(grille[y-1][x] == a){   // on voit s'il y a un allignement vertical vers le bas
+//         for (i = 0; i < 3; i++){
+//           if (grille[y-i][x] != a){
+//             res = false;
+//           }
+//         }
+//       }
+//     }
+//   return estComplete;
+//   }
 
 
-  public static boolean aGagneDiagMont (int x, int y, int a){
-    boolean estComplete = true;
+//   public static boolean aGagneDiagMont (int x, int y, int a){
+//     boolean estComplete = true;
 
-    if(grille[y][x] != a){estComplete = false;}
-    else if(grille[y+1][x+1] == a) { // on va verifier s'il y a un a dans la diagonale qui monte vers la droite. 
-      for (int i = 0; i < 3; i++){
-        if (grille[y+i][x+i] != a){estComplete = false;}
-      }
-    }
-    else if(grille[y+1][x-1] == a){ // on va verifier s'il y a un a dans la diagonale qui monte vers la gauche. 
-      for (int i = 0; i < 3; i++){
-        if (grille[y+i][x-i] != a){estComplete = false;}
-      }
-    }
-  return estComplete;
-  }
-    public static boolean aGagneDiagDesc (int x, int y, int a){
-    boolean estComplete = true;
+//     if(grille[y][x] != a){estComplete = false;}
+//     else if(grille[y+1][x+1] == a) { // on va verifier s'il y a un a dans la diagonale qui monte vers la droite. 
+//       for (int i = 0; i < 3; i++){
+//         if (grille[y+i][x+i] != a){estComplete = false;}
+//       }
+//     }
+//     else if(grille[y+1][x-1] == a){ // on va verifier s'il y a un a dans la diagonale qui monte vers la gauche. 
+//       for (int i = 0; i < 3; i++){
+//         if (grille[y+i][x-i] != a){estComplete = false;}
+//       }
+//     }
+//   return estComplete;
+//   }
+//     public static boolean aGagneDiagDesc (int x, int y, int a){
+//     boolean estComplete = true;
 
-    if(grille[y][x] != a){estComplete = false;}
-    else if(grille[y-1][x-1] == a) { // on va verifier s'il y a un a dans la diagonale qui déscend vers la gauche. 
-      for (int i = 0; i < 3; i++){
-        if (grille[y-i][x-i] != a){estComplete = false;}
-      }
-    }
-    else if(grille[y-1][x+1] == a){ // on va verifier s'il y a un a dans la diagonale qui déscend vers la droite. 
-      for (int i = 0; i < 3; i++){
-        if (grille[y-i][x+i] != a){estComplete = false;}
-      }
-    }
-  return estComplete;
-  }
-}
+//     if(grille[y][x] != a){estComplete = false;}
+//     else if(grille[y-1][x-1] == a) { // on va verifier s'il y a un a dans la diagonale qui déscend vers la gauche. 
+//       for (int i = 0; i < 3; i++){
+//         if (grille[y-i][x-i] != a){estComplete = false;}
+//       }
+//     }
+//     else if(grille[y-1][x+1] == a){ // on va verifier s'il y a un a dans la diagonale qui déscend vers la droite. 
+//       for (int i = 0; i < 3; i++){
+//         if (grille[y-i][x+i] != a){estComplete = false;}
+//       }
+//     }
+//   return estComplete;
+//   }
+// }
