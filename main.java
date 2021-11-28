@@ -1,4 +1,4 @@
-// EX1
+x// EX1
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -148,3 +148,6 @@ public class main {
 //   return estComplete;
 //   }
 // }
+
+
+public static 
