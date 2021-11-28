@@ -4,7 +4,7 @@ package puissance4;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class projet {
+public class main {
   public static void initialiseGrille(String[] args){
     int grille[][]={{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},};
     // on inicialise la grille: 6 lignes 7 colonnes
