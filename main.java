@@ -1,24 +1,23 @@
-// EX1
-package puissance4;
-
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
+// EX1
 public class main {
     static int grille[][]={{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},};
-    // public static void initialiseGrille(){
+    public static void initialiseGrille(){
 
-    // // on inicialise la grille: 6 lignes 7 colonnes
+    // on inicialise la grille: 6 lignes 7 colonnes
 
-    // Scanner sc = new Scanner(System.in);
-    // int a = sc.nextInt(); // nb joueur
+    Scanner sc = new Scanner(System.in);
+    static int a = sc.nextInt(); // nb joueur
     
-    // int j = sc.nextInt(); // nb colonne
-    // // à chaque partie on va réinicialiser a et j. Comme ça on a une seule variable pour les deux joueurs :D jaj 
+    static int j = sc.nextInt(); // nb colonne
+    // à chaque partie on va réinicialiser a et j. Comme ça on a une seule variable pour les deux joueurs :D jaj 
 
-    // int x = 3; //num. ligne de la case étudiée
-    // int y = 5; //num. colonne de la case étudiée
-    // }
+    static int x = 3; //num. ligne de la case étudiée
+    static int y = 5; //num. colonne de la case étudiée
+    }
+
   public static void javajouer (int a, int j){
     boolean estVide = false;
     for (int i = grille.length; estVide != true; i--){ 
@@ -42,25 +41,23 @@ public class main {
 
     public static void afficheGrille()
     {
-        for(int i=grille.length; i != -1 ; i--){ // On boucle sur les lignes de la dernière vers la première pour bien afficher
-            if(i!=-1)
-                {
-                    for(int j = 0; j < grille[0].length;j++) // On boucle sur le nb de colonne (Une fois qu'on dans une ligne on l'affiche numéro par numéro)
-                {
-                    System.out.println("|"+grille[i][j]+"|"); //On affiche de haut en bas donc faut boucler sur imax
-                }
-                }
-            else
-                {
-                    for(int j = 0; j < grille[0].length;j++) // On boucle sur le nb de colonne (ligne avec les numéros)
-                        {
-                            System.out.println("|" + j + "|");
-                        }
-                }
-        }}
+      for(int i=grille.length; i != -1 ; i--){ // On boucle sur les lignes de la dernière vers la première pour bien afficher
+        if(i!=-1){
+          for(int j = 0; j < grille[0].length;j++) // On boucle sur le nb de colonne (Une fois qu'on dans une ligne on l'affiche numéro par numéro)
+          {
+            System.out.println("|"+grille[i][j]+"|"); //On affiche de haut en bas donc faut boucler sur imax
+          }
+        }
+        else{
+          for(int j = 0; j < grille[0].length;j++) // On boucle sur le nb de colonne (ligne avec les numéros)
+          {
+            System.out.println("|" + j + "|");
+          }
+        }
+      }
+    }
 
     public static void main(String[] args) {
-
   }
 
 //EX2 
@@ -105,14 +102,14 @@ public class main {
       }
 
       else if(grille[y-1][x] == a){   // on voit s'il y a un allignement vertical vers le bas
-        for (i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++){
           if (grille[y-i][x] != a){
             res = false;
           }
         }
       }
     }
-  return estComplete;
+  return res;
   }
 
 
@@ -147,5 +144,12 @@ public class main {
       }
     }
   return estComplete;
+  }
+  public static boolean aGagne(int a){
+    for (int i = 0, i < grille.length, i++){
+      for (int j = 0, j< grille[1].length, j++){
+        if (grille[i][j]==a){}
+      }
+    }
   }
 }
