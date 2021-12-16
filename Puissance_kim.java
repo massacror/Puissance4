@@ -16,12 +16,18 @@ public class Puissance_kim {
 
     }
 
-  public static void jouer (int a, int j){
+  public static void jouer (int col, int joueur){
     boolean estVide = false;
-    for (int i = grille.length; estVide != true; i--){ 
+    if (joueur != 1 && joueur != 2)
+        {
+            System.out.println("Entrez un numéro de joueur valide");
+        }
+    else
+        {}
+    for (int i = 0; estVide != true; i++){ 
       //on boucle du bas de la grille joueur vers le haut; donc de imax en java vers imin
       if (grille[i][j] == 0){ 
-      grille[i][j] = a;
+      grille[i][j] = joueur;
       estVide = true;
       }
       
@@ -85,7 +91,7 @@ public class Puissance_kim {
   }
     public static void main(String[] args) {
         initialiseGrille();
-        jouer(1, 3);
+        jouer(3,1);
         afficheGrille();
 
     }
