@@ -30,11 +30,11 @@ public class Puissance_kim {
       estVide = true;
       }
       
-      else if (grille[i][j] != 0){
+      else if (grille[i][col] != 0){
         estVide = false;
       }
       // si la case est vide, on remplace le 0 par le nb du joueur. Si elle ne l'est pas, on avance la ligle (sur la même colonne)
-    }
+    }}
   }
 
   public static int entierAleatoire(int a, int b){
@@ -90,7 +90,9 @@ public class Puissance_kim {
   }
     public static void main(String[] args) {
         initialiseGrille();
-        Programme_final.jouer(3,1);
+        jouer(3,1);
+        jouer(3,2);
+        jouer(4,1);
         afficheGrille();
 
     }
