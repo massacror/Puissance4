@@ -76,6 +76,28 @@ public class Programme_final {
   return res;
   }
 
+  public static void jouer (int col, int joueur){
+    boolean estVide = false;
+    if (joueur != 1 && joueur != 2)
+        {
+            System.out.println("Entrez un numéro de joueur valide");
+        }
+    else
+        {}
+    for (int i = 0; estVide != true; i++){ 
+      //on boucle du bas de la grille joueur vers le haut; donc de imax en java vers imin
+      if (Puissance_kim.grille[i][j] == 0){ 
+      Puissance_kim.grille[i][j] = joueur;
+      estVide = true;
+      }
+      
+      else if (Puissance_kim.grille[i][j] != 0){
+        estVide = false;
+      }
+      // si la case est vide, on remplace le 0 par le nb du joueur. Si elle ne l'est pas, on avance la ligle (sur la même colonne)
+    }
+  }
+
 
 
 

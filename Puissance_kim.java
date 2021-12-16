@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Puissance_kim {
@@ -15,28 +14,6 @@ public class Puissance_kim {
     // on inicialise la grille: 6 lignes 7 colonnes
 
     }
-
-  public static void jouer (int col, int joueur){
-    boolean estVide = false;
-    if (joueur != 1 && joueur != 2)
-        {
-            System.out.println("Entrez un numéro de joueur valide");
-        }
-    else
-        {}
-    for (int i = 0; estVide != true; i++){ 
-      //on boucle du bas de la grille joueur vers le haut; donc de imax en java vers imin
-      if (grille[i][j] == 0){ 
-      grille[i][j] = joueur;
-      estVide = true;
-      }
-      
-      else if (grille[i][j] != 0){
-        estVide = false;
-      }
-      // si la case est vide, on remplace le 0 par le nb du joueur. Si elle ne l'est pas, on avance la ligle (sur la même colonne)
-    }
-  }
 
   public static int entierAleatoire(int a, int b){
     //Retourne un entier aléatoire entre a (inclus) et b (inclus)
@@ -91,7 +68,7 @@ public class Puissance_kim {
   }
     public static void main(String[] args) {
         initialiseGrille();
-        jouer(3,1);
+        Programme_final.jouer(3,1);
         afficheGrille();
 
     }
